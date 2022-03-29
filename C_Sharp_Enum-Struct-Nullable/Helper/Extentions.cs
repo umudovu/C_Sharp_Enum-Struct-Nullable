@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace C_Sharp_Enum_Struct_Nullable.Helper
 {
@@ -63,5 +59,31 @@ namespace C_Sharp_Enum_Struct_Nullable.Helper
             }
             return result;
         }
+
+        public static bool FirstTwo(this string groupno)
+        {
+            bool result = false;
+
+            if (Char.IsUpper(groupno[0])==true && Char.IsUpper(groupno[1])==true)
+            {
+                result=true;
+            }
+
+
+            return result;
+        }
+
+        public static bool LastThree(this string groupno)
+        {
+            bool result = false;
+            if (Char.IsNumber(groupno[2])==true && Char.IsNumber(groupno[3])==true && Char.IsNumber(groupno[4])==true)
+            {
+                result=true;
+            }
+            return result;
+        }
+
+
+
     }
 }

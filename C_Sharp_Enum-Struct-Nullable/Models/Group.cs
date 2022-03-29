@@ -1,4 +1,6 @@
-﻿namespace C_Sharp_Enum_Struct_Nullable.Models
+﻿using C_Sharp_Enum_Struct_Nullable.Helper;
+
+namespace C_Sharp_Enum_Struct_Nullable.Models
 {
     internal class Group : Student
     {
@@ -24,28 +26,46 @@
         }
 
 
-        private Student[] _students = new Student[_studentlimit];
+        private Student[] Students = new Student[_studentlimit];
 
-        public Student Students
+        public Student AddStudents
         {
             get
             {
-                return _students[_studentlimit];
+                return Students[_studentlimit];
             }
             set
             {
                 for (int i = 0; i < _studentlimit; i++)
                 {
-                    _students[i]=new Student(FullName, Point);
+                    Students[i]=new Student(FullName, Point);
                 }
             }
         }
+
+
 
         public Group(string fullname, int point, int groupno, int studentlimit) : base(fullname, point)
         {
             GroupNo = groupno;
             StudentLimit = studentlimit;
         }
+
+
+        public bool CheckGroupNo(string groupno)
+        {
+            bool result = false;
+            for (int i = 0; i < groupno.Length; i++)
+            {
+                if (groupno.Length>=5 && groupno.FirstTwo()==true && groupno.LastThree()==true)
+                {
+                    result=true;
+                }
+            }
+            return result;
+        }
+
+
 
     }
 }

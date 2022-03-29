@@ -1,5 +1,6 @@
 ﻿using C_Sharp_Enum_Struct_Nullable.Models;
 using System;
+using System.Text.RegularExpressions;
 
 namespace C_Sharp_Enum_Struct_Nullable
 {
@@ -7,6 +8,7 @@ namespace C_Sharp_Enum_Struct_Nullable
     {
         static void Main(string[] args)
         {
+
 
             string fullname = GetMetodString("Enter the fullname: ");
 
