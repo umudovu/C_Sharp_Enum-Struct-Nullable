@@ -7,6 +7,7 @@ namespace C_Sharp_Enum_Struct_Nullable
     {
         static void Main(string[] args)
         {
+
             string fullname = GetMetodString("Enter the fullname: ");
 
             string email = GetMetodString("Enter the e-mail: ");

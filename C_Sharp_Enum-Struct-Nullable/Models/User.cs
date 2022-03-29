@@ -1,17 +1,20 @@
 ﻿using C_Sharp_Enum_Struct_Nullable.Helper;
 using C_Sharp_Enum_Struct_Nullable.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace C_Sharp_Enum_Struct_Nullable.Models
 {
-    internal class User:IAccount
+    internal class User : IAccount
     {
-        private static int Id;
+        private static int _id;
 
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+        }
 
         public string FullName { get; set; }
         public string Email { get; set; }
@@ -21,7 +24,7 @@ namespace C_Sharp_Enum_Struct_Nullable.Models
 
         public User()
         {
-            Id++;
+            _id++;
         }
 
         public bool PasswordChecker(string password)
