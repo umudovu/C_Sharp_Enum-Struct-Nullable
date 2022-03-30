@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C_Sharp_Enum_Struct_Nullable.Models;
+using System;
 
 namespace C_Sharp_Enum_Struct_Nullable.Helper
 {
@@ -83,6 +84,8 @@ namespace C_Sharp_Enum_Struct_Nullable.Helper
             return result;
         }
 
+
+        
 
 
     }

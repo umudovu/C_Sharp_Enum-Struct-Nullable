@@ -26,7 +26,7 @@ namespace C_Sharp_Enum_Struct_Nullable.Models
         }
 
 
-        private Student[] Students = new Student[_studentlimit];
+        public Student[] Students;
 
         public Student AddStudents
         {
@@ -36,10 +36,7 @@ namespace C_Sharp_Enum_Struct_Nullable.Models
             }
             set
             {
-                for (int i = 0; i < _studentlimit; i++)
-                {
-                    Students[i]=new Student(FullName, Point);
-                }
+                Students[_studentlimit]=value;
             }
         }
 
@@ -63,6 +60,11 @@ namespace C_Sharp_Enum_Struct_Nullable.Models
                 }
             }
             return result;
+        }
+
+        public Student[] GetAllStudents()
+        {
+            return new Student[Students.Length];
         }
 
 
