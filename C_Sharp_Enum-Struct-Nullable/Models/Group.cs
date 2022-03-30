@@ -16,27 +16,25 @@ namespace C_Sharp_Enum_Struct_Nullable.Models
             }
             set
             {
-                if (!(value>4 || value<19))
+                if (value>4 || value<19)
+                {
+                    _studentlimit = value;
+                }
+                else
                 {
                     System.Console.WriteLine("Student limit can be a minimum of 5 and a maximum of 18");
-                    return;
                 }
-                _studentlimit = value;
             }
         }
 
 
         public Student[] Students;
 
-        public Student AddStudents
+        public void AddStudents(Student stu)
         {
-            get
+            if (Students.Length==_studentlimit)
             {
-                return Students[_studentlimit];
-            }
-            set
-            {
-                Students[_studentlimit]=value;
+                Students=new Student[Students.Length];
             }
         }
 
